@@ -6,8 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="script.js" ></script>
+    <style>
+        body {
+            background-color: #777; 
+            color: orangered;
+            cursor: default;
+        }
+        div {
+            border: 1px black solid;
+            padding: 5px;
+            border-radius: 4px;
+            padding: 15px;
+            box-shadow: 1px 1px 3px #444;
+        }
+        .inner {
+            background-color: salmon;
+            color: navy;
+            padding: 10px;
+            margin-left: 20px;
+        }
+
+        #outerdiv {
+            background-color: sandybrown;
+            width: 40vw;
+        }
+
+        #middlediv {
+            background-color: brown;
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        #outerdiv > p {
+            text-shadow: #fbff0052 0px 1px 0px;
+        }
+
+    </style>
 </head>
 <body>
+<h1>DOM events</h1>
+
+<div id="outerdiv">
+    <div id="middlediv">
+        <div class="inner" id="inner1">inner1</div>
+        <div class="inner" id="inner2">inner2</div>
+        <div class="inner" id="inner3">inner3</div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe non voluptatum perspiciatis fuga veritatis. Recusandae molestias dolor sed rerum illum, id maiores consequatur quaerat, delectus pariatur, odit perferendis quibusdam deleniti rem necessitatibus facilis. Corporis magnam inventore ipsam repellat impedit dolores, laborum ut sed laudantium mollitia quas. Nobis exercitationem velit eos animi quas magnam ex inventore aliquam architecto rerum blanditiis omnis, in similique harum recusandae dolor necessitatibus! Alias tempore ex unde nesciunt excepturi esse voluptates eum dolor, quas officia voluptatibus porro assumenda eveniet nisi maiores accusantium illo perspiciatis. Hic expedita iste pariatur laboriosam facere eius, ipsa velit labore quia vel esse aut minima consequuntur soluta iusto animi illum sequi sunt? Voluptate explicabo quibusdam veniam eveniet quisquam ducimus recusandae quos dolore quasi? Nostrum amet blanditiis repellat voluptates, a eius sint consequatur necessitatibus unde. Veritatis animi alias nostrum magni? Veniam minima architecto amet eaque totam illum quibusdam rem. Voluptate animi, ab hic numquam nihil quos, beatae eveniet laboriosam molestiae eligendi expedita fuga voluptatem libero. Aperiam atque perferendis cupiditate rerum error veritatis libero corrupti, tenetur labore molestias neque suscipit hic eius nobis nam vitae inventore ea sunt officia voluptate natus dolorem quaerat sit. Molestiae quo debitis officia adipisci. Eum fuga accusantium nobis esse, quos id dolorum ut veniam sequi excepturi. Explicabo, in delectus vitae sed ea nisi. Molestiae maxime facere eos reprehenderit optio. Deleniti cupiditate excepturi similique impedit explicabo nisi dolor illo rem dolorem, error aspernatur, distinctio, itaque labore repellendus. Ratione in consequatur fugit dolore iusto blanditiis, quisquam atque nobis labore nesciunt, quis veritatis eaque enim ipsum. Perspiciatis, cumque? Sunt cum commodi aliquid ipsam cumque a consectetur accusantium laboriosam magnam, sequi molestias, tempora libero voluptate quia? Culpa eius reiciendis, necessitatibus accusamus autem in? Quam id totam officiis maiores error voluptatum perferendis. Accusantium molestiae maiores aliquid ducimus sapiente deserunt. Consequatur minus quo architecto, et tenetur nostrum laboriosam quasi temporibus numquam obcaecati saepe! Quia sint eum soluta voluptates ab, dolorem ea ex sequi! Fugit, sint cumque. Delectus, molestiae suscipit! Consequatur maiores cumque, doloribus, debitis similique doloremque labore ipsa laboriosam esse quia at voluptatum odio numquam adipisci. Odit quod earum soluta cum, id praesentium voluptates voluptatibus modi.
+    </p>
+</div>
+
     
 </body>
 </html>
