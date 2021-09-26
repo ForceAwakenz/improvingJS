@@ -17,20 +17,17 @@ function oracle(gestures){
 
     console.log(gestureWon);
 
-    if (Object.values(gestureWon).reduce((won, acc) => won + acc, 0)) {
+    if (Object.values(gestureWon).every(gest => gest === 0)) {
         return 'tie';
     } else {
+        const resultArr = [];
         for (let gest in gestureWon) {
-            if (gestureWon[gest] < 1) {
-                delete gestureWon[gest];
+            if (gestureWon[gest] > 0) {
+                resultArr.push(gest);
             }
         }
-        const resultArr = [];
-        Object.keys(gestureWon).forEach( g => {
-            resultArr.push(g);
-        });
         
-        console.log(resultArr);
+        console.log(resultArr.join('/'));
 
         return resultArr.join('/');
     }
@@ -38,3 +35,33 @@ function oracle(gestures){
 
   oracle(["rock","paper","scissors","rock"]);
   oracle(["paper","scissors","scissors"]);
+  oracle(["paper","scissors","rock"]);
+
+// ========== Interesting solves:
+
+//   function oracle(gestures) {
+//     let result = [];
+    
+//     let obj = {
+//       "rock": 0,
+//       "paper": 0,
+//       "scissors": 0
+//     }
+    
+//     for (let i = 0; i < gestures.length; i++) {
+//       let gesture = gestures[i];
+//       obj[gesture]++;
+//     }
+    
+//     if (obj.scissors > obj.paper) result.push("rock"); // !
+//     if (obj.rock > obj.scissors) result.push("paper");
+//     if (obj.paper > obj.rock) result.push("scissors");
+    
+//     return result.join("/") || "tie"; // !
+//   }
+
+// ========================================================================== 
+// ==========================================================================
+
+
+
