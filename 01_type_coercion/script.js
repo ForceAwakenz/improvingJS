@@ -240,7 +240,7 @@ new Date(0) + 0 // 'Thu Jan 01 1970 03:00:00 GMT+0300 (Eastern European Standard
 
 
 String(Symbol('my symbol'))   // 'Symbol(my symbol)'
-'' + Symbol('my symbol')      // ошибка TypeError
+// '' + Symbol('my symbol')      // ошибка TypeError
 
 // это выражение возвращает число 123, а не true
 // 'hello' и 123 неявно преобразуются к логическому типу при работе оператора && для вычисления значения выражения
