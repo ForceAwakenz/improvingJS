@@ -36,6 +36,8 @@ console.log({black, white, grey});
 
 // ===========================
 
+
+
 const people = [
     {
       name: 'Mike Smith',
@@ -51,10 +53,13 @@ const people = [
         father: 'Richard Jones',
       },
     }
-  ];
+];
+
+const [,{family:{...tomJFamily}}] = people;
+console.table({tomJFamily});
 
 for (const {name: n, family: {father: f}} of people) {
-    console.log('Name: ' + n + ', Father: ' + f);
+    console.warn('Name: ' + n + ', Father: ' + f);
 }
 
 // ===========================
