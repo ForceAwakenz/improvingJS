@@ -45,7 +45,7 @@ Number({ toString: () => 2, valueOf: () => 1 })   ;// -> 1
 
 !+[]+[]+![] ;// 'truefalse'
 
-{}+[]+{}+[1] // ❗'0objectObject1'
+{}+[]+{}+[1] // ❗'0object Object1'
 
 
 // ==============================================================
@@ -233,7 +233,7 @@ null == '' // false
 [] + null + 1 // null1
 0 || "0" && {} ;// {}
 [1,2,3] == [1,2,3] ;// false
-{}+[]+{}+[1] // '0[objectObject]1' ❗
+{}+[]+{}+[1] // '0[object Object]1' ❗
 !+[]+[]+![] // 'truefalse'
 new Date(0) - 0 // 0
 new Date(0) + 0 // 'Thu Jan 01 1970 03:00:00 GMT+0300 (Eastern European Standard Time)0'

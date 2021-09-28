@@ -1,42 +1,42 @@
-[] + null + 1 ;// 
+[] + null + 1 ;// 'null1'
 
-[0] == 0 ;// 
+[0] == 0 ;// true
 
-[] == ![]; // 
+[] == ![]; // true, []==!'', []==!false, []==true, true==true
 
-null == "\n0\n" // 
+null == "\n0\n" // false
 
-!![]       ;// 
-[] == true ;// 
+!![]       ;// true
+[] == true ;// false
 
-[''] == ''     ;// 
-[0] == 0       ;// 
-[0] == ''      ;// 
-[''] == 0      ;// 
+[''] == ''     ;// true
+[0] == 0       ;// true
+[0] == ''      ;// false, [0] -> '0', '0'!=='' 
+[''] == 0      ;// true
 
-[null] == ''          ;// 
-[null] == 0           ;// 
+[null] == ''          ;// true
+[null] == 0           ;// true
 
-Number()          ;// 
-Number(undefined) ;// 
-
-
-parseInt({ toString: () => 2, valueOf: () => 1 }) ;// 
-Number({ toString: () => 2, valueOf: () => 1 })   ;// 
+Number()          ;// 0
+Number(undefined) ;// NaN
 
 
-[] + {}   ;// 
-{} + []   ;// 
-({} + []) ; //  
+parseInt({ toString: () => 2, valueOf: () => 1 }) ;// 2
+Number({ toString: () => 2, valueOf: () => 1 })   ;// 1
 
 
-( { [{}]: {} } ) ;// 
+[] + {}   ;// '[object Object]'
+{} + []   ;// 0
+({} + []) ; //  '[object Object]'
 
-`${{Object}}` // 
+
+( { [{}]: {} } ) ;// {'[object Object]': {} }
+
+`${{Object}}` // [object Object]
 
 // let f = () => {}
-// f() // 
+// f() // undefined
 
-!+[]+[]+![] ;// 
+!+[]+[]+![] ;// 'truefalse'
 
-{}+[]+{}+[1] // 
+{}+[]+{}+[1] // 0[object Object]1
