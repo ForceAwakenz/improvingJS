@@ -29,9 +29,8 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // passing the arguments to callback 
 const array1 = ['a', 'b', 'c'];
 
-array1.forEach(element => console.log(element));
-console.warn('');
-array1.forEach(console.log); 
+// array1.forEach(element => console.log(element));
+// array1.forEach(console.log); 
 
 
 // =========================
@@ -39,13 +38,13 @@ array1.forEach(console.log);
 // =========================
 let words = ['one', 'two', 'three', 'four']
 words.forEach(function(word) {
-  console.log(word)
+//   console.log(word)
   if (word === 'two') {
     words.shift() //'one' will delete from array
   }
 }) // one // two // four
 
-console.log(words);  //['two', 'three', 'four']
+// console.log(words);  //['two', 'three', 'four']
 
 // =========================
 
@@ -60,6 +59,10 @@ console.log(words);  //['two', 'three', 'four']
 
 // ***********************************************************************************
 // 🟢 Array.from ********************************************
+
+
+
+
 // 🟢 Array.isArray ********************************************
 // 🟢 Array.toString ********************************************
 // ***********************************************************************************
