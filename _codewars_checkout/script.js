@@ -124,9 +124,29 @@
 // Last Survivor Ep.2
 // https://www.codewars.com/kata/60a1aac7d5a5fc0046c89651/train/javascript
 
-function lastSurvivors(str) {
+// function lastSurvivors(str) {
 
-}
+//     let notSolved = true;
+//     let strArr = [...str];
+
+//     do {
+//         strArr.forEach((char, indx) => {
+
+//             const arrWithoutChar = [...strArr];
+//             arrWithoutChar.splice(indx,1);
+//             console.log(arrWithoutChar);
+
+//             if (arrWithoutChar.some(c => c===char)) {
+//                 console.log(`char ${char} indx ${indx} is some? ${arrWithoutChar}`)
+//             }
+//         });
+//         notSolved = false;
+//     } while (notSolved);
+
+
+// }
+
+// lastSurvivors('azzzb');
 
 /*
 'azzzb'
@@ -140,4 +160,6 @@ function lastSurvivors(str) {
 
 
 */
+
+
 
