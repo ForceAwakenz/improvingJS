@@ -56,5 +56,3 @@ const map = new Map(arrPerson);
 console.log('map', map);
 
 
-
-
