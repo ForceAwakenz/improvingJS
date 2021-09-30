@@ -56,7 +56,7 @@ const people = [
 ];
 
 const [,{family:{...tomJFamily}}] = people;
-console.table({tomJFamily});
+console.table(tomJFamily);
 
 for (const {name: n, family: {father: f}} of people) {
     console.warn('Name: ' + n + ', Father: ' + f);

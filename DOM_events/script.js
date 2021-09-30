@@ -26,10 +26,11 @@ const obj = {
     wrapper : function (func) {
         console.log(this);// {a: 10, wrapper: ƒ}
         func();
+        
     },
 }
 
-function thisIndicator(a) {
+const thisIndicator = () => {
     console.log(this); // undefined
     // ========================= Why it works different then eventListener ?????????? ========================
 }

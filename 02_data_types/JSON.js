@@ -1,7 +1,7 @@
 let user = {
-    name: "Василий Иванович",
+    name: "Martin Eden",
     age: 35
-  };
+};
 
 let userString = JSON.stringify(user);
 console.log(userString);

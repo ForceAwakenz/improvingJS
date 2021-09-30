@@ -1,5 +1,7 @@
 'use strict';
 
+console.warn('================== Object Methods =============')
+
 const father = {
     experience: true,
     age: 50
