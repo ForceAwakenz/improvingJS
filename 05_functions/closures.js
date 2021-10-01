@@ -89,7 +89,7 @@ for (var i = 1; i <= 5; i++) {
 }
 
 for (var i = 1; i <= 5; i++) {
-    setTimeout((i) => {
+    setTimeout( i => {
         console.log('my solution', i); // -> 1 2 3 4 5
     }, 2000, i);
 }
