@@ -133,7 +133,7 @@ for (var i = 1; i <= 5; i++) {
 {
     var z = 1;
     let q = 1;
-    setTimeout(() => console.log('z: ', z, 'q: ', q));
+    setTimeout(() => console.log('z: ', z, 'q: ', q)); // z: 2 , q: 1
 }
 
 {
@@ -143,8 +143,15 @@ for (var i = 1; i <= 5; i++) {
 
 
 
+// ================== Not closure: ==========================
+// it's object reference
 
+var foo = (function () {
 
+    var o = { bar: 'bar'};
 
+    return {obj: o}
+})();
 
-
+// console.log(foo.obj.bar);
+// console.log(o.bar)

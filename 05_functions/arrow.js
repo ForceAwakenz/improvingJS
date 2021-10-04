@@ -18,3 +18,8 @@ function empty(f) {
   
 group.showList();
 
+// ============ arrow returns object 
+
+const createObj = (a, b) => ({alpha: a, beta: b});
+
+console.log(createObj(100, 200));
