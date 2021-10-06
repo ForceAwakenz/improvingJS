@@ -1,5 +1,6 @@
 'use strict';
-// console.warn('================== solved ================ ');
+console.warn('================== solved ================ ');
+console.warn('================== this and inheritance ================ ');
 // ====================  ==========================
 
 
@@ -151,3 +152,4 @@ const ng2 = new NameGenerator2();
 
 NameGenerator2.revealThisStatic(); // ƒ NameGenerator2() {this.revealThis(); ... }
 
+console.warn('================================== ');

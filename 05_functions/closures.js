@@ -116,7 +116,7 @@ for (let i = 1; i <= 5; i++) {
 
 for (var i = 1; i <= 5; i++) {
     (function(i) {
-        setTimeout(() => console.log('iify', i), 5000); // -> 1 2 3 4 5
+        setTimeout(() => console.log('iife', i), 5000); // -> 1 2 3 4 5
     }
     )(i);
 }
@@ -127,6 +127,11 @@ function printWithDelay(i) {
 
 for (var i = 1; i <= 5; i++) {
     printWithDelay(i);
+}
+
+for (var i = 1; i <= 5; i++) {
+    setTimeout(console.log.bind(null, 'bind', i) // -> 1 2 3 4 5
+    , 7000);
 }
 
 
@@ -155,3 +160,45 @@ var foo = (function () {
 
 // console.log(foo.obj.bar);
 // console.log(o.bar)
+
+
+// ========================= Closure's acces to arguments object ============================
+
+function arrowInside (arg1, arg2) {
+    const arrow = () => {
+        console.log(arguments);
+    }
+
+    return arrow;
+}
+
+const arrowClosure = arrowInside(1, 5);
+
+arrowClosure();
+
+function futureMethod() {
+
+    const thisAccessor = () => console.log(this.name);
+    return thisAccessor;
+
+}
+
+const objective = {
+    name: 'Zorro'
+}
+
+const closer = futureMethod.call(objective);
+
+closer();
+
+// =========================================================
+
+let theName = "John";
+
+function sayHi() {
+  console.log("Hi, " + theName);
+}
+
+theName = "Pete";
+
+sayHi(); // Hi Pete

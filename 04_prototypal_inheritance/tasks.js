@@ -25,11 +25,14 @@ c.z = 3;
 
 class A {
     static x = 3;
+    // yo = 'might be in prototype'; // no, it's in every instance
     constructor(name) {
      this.name = name;
     }
     fun1 () {};
 }
+
+// console.log(new A('hi').yo);
    
 class B extends A {
     static z = 323;
@@ -41,21 +44,31 @@ class B extends A {
 }
 
 function C(name) {
-    const x = 3;
     this.name = name;
+    // this.__proto__.constructor.x = 3;
+    // ^^ the same as C.x = 3 outside the constructor,
+    // but doesn't work until we instantiate new C instance
 }
+
+// C.x = 3
+
 C.prototype.fun1 = function () {};
 
+const newC = new C('c');
+console.log(C.x)
+
 function D(name, age) {
-    C(name);
+    C.call(this, name);
     this.age = age;
-    let z = 323;
 }
+
+D.prototype = Object.create(C.prototype);
+
+D.z = 323;
 
 D.prototype.fun2 = function () {};
 
-console.dir(C);
-console.dir(D);
+
 
 
 

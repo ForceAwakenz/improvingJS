@@ -16,7 +16,7 @@ class NameGenerator {
         this.names = ['Kiril', 'Max', 'Elon'];
         this.currentName = 0;
         // this.addName();
-        btn.addEventListener('click', this.addName); 
+        btn.addEventListener('click', this.addName.bind(this)); 
         // ^^^^^^^^^ the second this points to this outside of a function, the first one - to btn
         // btn.addEventListener('click', () => this.addName()); 
         // ^^^^^^^^  'this' jumps through btn object and points to this outside of a function
@@ -37,9 +37,20 @@ const gen = new NameGenerator();
 
 
 
+// ==================================================================================
 
 
+const obj = {
+    name: 'Duke',
+    cars: ['bmw', 'audi', 'vw', 'infiniti'],
+    display: function() {
+        this.cars.forEach( function (car) {
+            console.log(`${this.name} has ${car}`);
+        }.bind(this));
+    }
+}
 
+obj.display();
 
 
 
