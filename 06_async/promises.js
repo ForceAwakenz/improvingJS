@@ -108,4 +108,4 @@ async function fetchSomeData() {
 
 }
 
-fetchSomeData();
+fetchSomeData().then(() => console.log('async function return promise, so we can chain then method as well'));
