@@ -1,7 +1,7 @@
 'use strict';
 
 // Rock Paper Scissors Oracle
-// https://www.codewars.com/kata/580535462e7b330bd300003d/train/javascript
+// https://www.codewars.com/kata/580535462e7b330bd300003d/train/javascript ✔
 
 
 // function oracle(gestures){
@@ -59,7 +59,7 @@
 // ==========================================================================
 
 // Last Survivor
-// https://www.codewars.com/kata/609eee71109f860006c377d1/train/javascript
+// https://www.codewars.com/kata/609eee71109f860006c377d1/train/javascript ✔
 
 
 // function lastSurvivor(letters, coords) {
@@ -122,7 +122,7 @@
 
 
 // Last Survivor Ep.2
-// https://www.codewars.com/kata/60a1aac7d5a5fc0046c89651/train/javascript
+// https://www.codewars.com/kata/60a1aac7d5a5fc0046c89651/train/javascript ✔
 
 // function lastSurvivors(str) {
 
@@ -163,3 +163,49 @@
 
 
 
+// ========================================================================== 
+// ==========================================================================
+
+// Promises Made and Broken: The Misadventures of Bob the Highly Paid Consultant
+// https://www.codewars.com/kata/587593285448632b8d000143/train/javascript ✔
+
+// function submitOrder(user) {
+//     var shoppingCart, zipCode, shippingRate, orderSuccessful;
+
+//     Promise.all([OrderAPI.getShoppingCartAsync(user), CustomerAPI.getProfileAsync(user)])
+//         .then( arr => {
+//             shoppingCart = arr[0];
+//             zipCode = arr[1].zipCode;
+//             return [shoppingCart, zipCode];
+//         })
+//         .then( arr => {
+//             shippingRate = calculateShipping(...arr);
+//         })
+//         .then(
+//             () => OrderAPI.placeOrderAsync(shoppingCart, shippingRate)
+//         )
+//         .then(
+//             success => orderSuccessful = success
+//         )
+//         .then(
+//             () => {
+//                 console.log(`Your order ${orderSuccessful? "was" : "was NOT"} placed successfully`)
+//             }
+//         )
+
+// }
+
+
+
+// ========================================================================== 
+// ==========================================================================
+
+
+// ⭕field chained HTML formatting
+// https://www.codewars.com/kata/5e98a87ce8255200011ea60f
+
+
+
+
+// ========================================================================== 
+// ==========================================================================
