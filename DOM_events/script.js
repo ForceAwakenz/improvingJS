@@ -39,12 +39,18 @@ obj.wrapper(thisIndicator);
 
 // ============================================
 
+console.warn('===============================================');
+
 const outer = document.getElementById('outerdiv');
-const middle = document.getElementById('midlediv');
+const middle = document.getElementById('middlediv');
 const inner1 = document.getElementById('inner1');
 const inner2 = document.getElementById('inner2');
 const inner3 = document.getElementById('inner3');
 
 
-outer.addEventListener('click', () => console.log('outer capturing'), true);
-outer.addEventListener('click', () => console.log('outer bubbling'));
+// outer.addEventListener('click', () => console.log('outer capturing'), true);
+// outer.addEventListener('click', () => console.log('outer bubbling'));
+
+middle.addEventListener('click', e => {e.stopPropagation()});
+inner1.addEventListener('click', () => console.log('hi'), {once: true})
+
