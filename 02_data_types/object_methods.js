@@ -16,7 +16,7 @@ console.table(father);
 console.table(son);
 
 for (const props in son) {
-    console.log(props);
+    console.log(props); // took father's experience property through prototypal chain
 }
 
 console.log('=========== Object.assign in work: ');
@@ -31,7 +31,7 @@ console.table(son);
 console.log('=========== Testing Object.keys/.values with forEach');
 
 Object.keys(son).forEach( key => {
-    console.log('key: ', key, '|||   son[key] -> ', son[key]);
+    console.log('key: ', key, '|||   son[', key, '] -> ', son[key]);
 });
 
 console.log('=========== Testing Object.entries with for of');

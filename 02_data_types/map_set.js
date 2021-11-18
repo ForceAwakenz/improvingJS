@@ -29,7 +29,7 @@ testMap.set('ja', 100).set(100 , '100');
 
 // testMap.forEach(console.log);
 
-console.log([...testMap.keys()].filter(e => e !== true || e !== 'ja')); // .keys returns iterable
+console.log(testMap.keys().filter(e => e !== true || e !== 'ja')); // .keys returns iterable
 
 
 // ===================== Minin on Map and Set ==========================

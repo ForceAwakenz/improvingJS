@@ -61,8 +61,8 @@ const variable = 1;
 const anotherObj = {
     lookup() {
         console.log('anotherObj -> lookup() -> ', variable); // 1
-        // ^^^^^^^^^^^^^^^^^^^^^^^objects doesn't lookup variable through scope chain
-        // console.log(this.variabe); // undefined
+        // ^^^^^^^^^^^^^^^^^^^^ objects does lookup variable through scope chain
+        console.log(this.variabe); // undefined
     }
 };
 

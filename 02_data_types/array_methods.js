@@ -35,7 +35,7 @@ const array1 = ['a', 'b', 'c'];
 // Modifying the array during iteration
 // =========================
 
-let words = ['one', 'two', 'three', 'four']
+let words = ['one', 'two', 'three', 'four'];
 words.forEach(function(word) {
 //   console.log(word)
   if (word === 'two') {
@@ -118,13 +118,13 @@ console.log('[findIndex]: what is the index of element that is bigger, then 3 ? 
 
 console.log('[findIndex] of element that is bigger than 50, result -> ', arr10.findIndex(i => i > 50)); // -1
 
+// ***********************************************************************
+
 // 🟢 includes: ƒ includes() ********************************************
 
 console.log('array [includes] 3 ? -> ', arr10.includes(3)); // true
-console.log('array [includes] 17 ? -> ', arr10.includes(17)); // true
+console.log('array [includes] 17 ? -> ', arr10.includes(17)); // false
 console.log('array [includes] 1, if count from 3d index ? -> ', arr10.includes(1, 3)); // false
-
-// ***********************************************************************
 
 const arr22 = [1, 2, 3, 1, 2];
 console.log('array to work with: ', arr22);

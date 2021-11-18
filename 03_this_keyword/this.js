@@ -11,7 +11,7 @@ document.querySelector('h1').addEventListener('click', function() {
 let person = {
     name: 'John Doe',
     getName: function() {
-        console.log(this);
+        console.log({...this});
     }
 };
 

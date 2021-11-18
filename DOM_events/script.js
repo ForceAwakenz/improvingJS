@@ -51,6 +51,6 @@ const inner3 = document.getElementById('inner3');
 // outer.addEventListener('click', () => console.log('outer capturing'), true);
 // outer.addEventListener('click', () => console.log('outer bubbling'));
 
-middle.addEventListener('click', e => {e.stopPropagation()});
-inner1.addEventListener('click', () => console.log('hi'), {once: true})
+middle.addEventListener('click', e => {e.stopPropagation()}, {capture: true});
+inner1.addEventListener('click', () => console.log('hi'))
 
