@@ -52,6 +52,64 @@ const obj = {
 
 obj.display();
 
+// ==================================================================================
+
+
+function test() {
+    let testObj = {
+        thisHandler(thisParam) {
+            console.log(this); // testObj...
+            console.log(thisParam); // undefined
+        }
+    }
+
+    testObj.thisHandler(this); 
+
+}
+test();
+
+
+class TestClass {
+
+    showThis(thisInParam) {
+        console.log('this', this);
+        console.log('this in param', thisInParam)
+    }
+
+}
+
+let a = new TestClass();
+
+class TestChildClass {
+    constructor() {
+        a.showThis(this);
+    }
+}
+
+let b = new TestChildClass();
+
+
+// ========================================================
+
+function showThisRegular() {
+    console.log(this);
+}
+
+const shotThisArrow = () => console.log(this);
+
+const importerObject = {
+
+};
+
+
+// ========================================================
+
+
+
+
+
+
+
 
 
 

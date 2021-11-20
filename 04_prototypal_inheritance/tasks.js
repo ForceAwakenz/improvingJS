@@ -68,7 +68,9 @@ D.z = 323;
 
 D.prototype.fun2 = function () {};
 
-D.prototype.constructor = D;
+D.prototype.constructor = D; 
+
+console.log(D.prototype.constructor)
 
 
 

@@ -40,3 +40,12 @@ for (const [key, value] of Object.entries(son)) {
     console.log('key:', key, 'value', value);
 }
 
+
+const z = {};
+const w = {name: 'w'};
+
+const isEmptyObject = obj => !!Object.keys(obj).length;
+
+
+console.log(isEmptyObject(w));
+console.log(isEmptyObject(z));

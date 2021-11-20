@@ -4,8 +4,8 @@ const variable = 1;
 
 const anotherObj = {
     lookup() {
-        // console.log(variable); // undefined 
-        // ^^^^^^^^^^^^^^^^^^^^^^^objects doesn't lookup variable through scope chain
+        console.log(variable); // 1
+        // ^^^^^^^^^^^^^^^^^^^^^^^objects does lookup variables through scope chain
         // console.log(this.variabe); // undefined
     }
 };
@@ -37,10 +37,10 @@ function aliveVariable() {
     // let v = 1;
 
     setTimeout(() => {
-        console.log(v);
+        console.log(v); // it works!! ==> 2
     }, 2000);
     
-    let v = 2;
+    let v = 2; 
     
 }
 
@@ -163,6 +163,7 @@ var foo = (function () {
 
 
 // ========================= Closure's acces to arguments object ============================
+
 
 function arrowInside (arg1, arg2) {
     const arrow = () => {
